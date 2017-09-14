@@ -3,7 +3,7 @@ export default function listOfTodo(state = [], action) {
         case 'ADD_TODO':
             return [action.payload, ...state]
         case 'REMOVE_TODO':
-            return state - 1
+            return action.payload
         default:
             return state
     }

@@ -40,4 +40,12 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators({clickButton: clickButton}, dispatch)
 }
 
+/*
+Si l'on avait pas utilisé bindActionCreators et donc pas actions/index on aurait pu faire plus long
+matchActionToProps = (dispatch) => ({
+ clickButton(newTodo) {
+    dispatch({type: 'ADD_TODO', payload: newTodo})
+ }
+})
+*/
 export default connect(null, matchDispatchToProps)(TodoForm)

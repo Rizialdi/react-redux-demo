@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
-
 
 class ListItem extends Component {
 
@@ -13,7 +11,6 @@ class ListItem extends Component {
             </ul>
         );
     }
-
 }
 
 function mapStateToProps(state) {
