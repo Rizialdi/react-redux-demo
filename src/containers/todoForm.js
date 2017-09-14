@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import {Button, FormControl, Col, Row} from 'react-bootstrap';
 import clickButton from '../actions/index'
+
+
 class TodoForm extends Component{
     constructor(){
         super();
@@ -13,13 +16,25 @@ class TodoForm extends Component{
     }
     render(){
         return(
-            <form action="#" method = "POST">
-                <input type="text"
-                       value = {this.state.value}
-                       placeholder="Add a todo"
-                       onChange={this._onChangeHandler}
-                />
-                <button onClick={this._onClickHandler}>Click Me please</button>
+            <form action="#" method = "POST" >
+                <Row>
+                    <Col xs={1} ></Col>
+                    <Col xs={9} >
+                    <FormControl
+                        type="text"
+                        value = {this.state.value}
+                        placeholder="Add a todo"
+                        onChange={this._onChangeHandler}
+                    />
+                    </Col>
+                    <Col xs={2} >
+                    <Button
+                        bsStyle = "primary"
+                        type="submit"
+                        onClick={this._onClickHandler}
+                    >Add Item</Button>
+                    </Col>
+                </Row>
             </form>
         )
     }

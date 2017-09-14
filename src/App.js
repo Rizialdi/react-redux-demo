@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ListItem from './containers/listItem'
 import TodoForm from './containers/todoForm'
+import JumboPresent from './components/jumbo_present'
 import store from './store'
 import {Provider} from 'react-redux'
 
@@ -11,13 +12,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Welcome to Todo App</h2>
-                </div>
-                <p className="App-intro">
-                    Veuilllez entrer les taches a faire et effacer les une fois completes
-                </p>
+                <JumboPresent />
                 <TodoForm />
                 <ListItem />
             </div>
