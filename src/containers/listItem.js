@@ -1,33 +1,23 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {Button, Well, Col, Row, Grid} from 'react-bootstrap';
+import Item from '../components/item'
+
+
 class ListItem extends Component {
-
     render() {
-        let item = this.props.listOfTodo
-                        .map((item, i) =>
-                            <Grid className = "well col-sm-12">
-                                <Row>
-                                    <Col xs={12} sm={8}>
-                                        <li key ={i}>{item}</li>
-                                    </Col>
-                                    <Col xs={12} sm={2}>
-                                        <Button bsStyle = "success">Done</Button>
-                                    </Col>
-                                    <Col xs={12} sm={2}>
-                                        <Button bsStyle = "danger">Remove</Button>
-                                    </Col>
-                                </Row>
-                            </Grid>)
-        return (
 
+        let item = this.props.listOfTodo
+                        .map((item) => <Item key = {item.id} item = {item.newTodo} />)
+        return (
             <ul>
                 {item}
             </ul>
         );
     }
 }
-
+/*Cette fronction permet de recuperer dans le store les proprietes dont jai besoin
+Ici je renvoi la liste de taches qui sera scannee une par une et affichee dans le
+ component <Item /> */
 function mapStateToProps(state) {
     return {
         listOfTodo: state.listOfTodo

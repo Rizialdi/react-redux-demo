@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ListItem from './containers/listItem'
 import TodoForm from './containers/todoForm'

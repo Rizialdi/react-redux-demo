@@ -23,6 +23,10 @@ ul {
   margin-top: 3em;
 }
 
+.item_done {
+  text-decoration: line-through;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

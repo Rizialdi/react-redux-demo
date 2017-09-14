@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {Button, FormControl, Col, Row} from 'react-bootstrap';
 import clickButton from '../actions/index'
-
+import uuid from 'uuid'
 
 class TodoForm extends Component{
     constructor(){
@@ -44,7 +44,8 @@ class TodoForm extends Component{
             alert("Veuillez remplir la tache");
             return false
         }
-        this.props.clickButton(this.state.value);
+        let id = uuid.v4();
+        this.props.clickButton(this.state.value, id);
         this.setState({value: ''})
     }
 
