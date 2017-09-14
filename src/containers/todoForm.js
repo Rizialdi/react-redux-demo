@@ -25,6 +25,10 @@ class TodoForm extends Component{
     }
     _onClickHandler(e){
         e.preventDefault();
+        if(!this.state.value){
+            alert("Veuillez remplir la tache");
+            return false
+        }
         this.props.clickButton(this.state.value);
         this.setState({value: ''})
     }
