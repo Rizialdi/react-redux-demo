@@ -7,7 +7,7 @@ class ListItem extends Component {
     render() {
 
         let item = this.props.listOfTodo
-                        .map((item) => <Item key = {item.id} item = {item.newTodo} />)
+                        .map((item) => <Item key = {item.id} item = {item.newTodo} id = {item.id} />)
         return (
             <ul>
                 {item}

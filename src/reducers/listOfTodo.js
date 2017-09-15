@@ -5,7 +5,10 @@ export default function listOfTodo(state = [], action) {
         case 'ADD_TODO':
             return [action.payload, ...state]
         case 'REMOVE_TODO':
-            return action.payload
+            //utilisation de la fonction filter qui retourne tous les elements  verifiant la condition
+            //jai mis la negation pour retourner tout ce dont lidentifiant ne correspond pas
+            let filteredArray = [...state].filter(item => !(item.id === action.payload));
+            return filteredArray;
         default:
             return state
     }

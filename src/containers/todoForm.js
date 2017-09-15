@@ -46,7 +46,7 @@ class TodoForm extends Component{
         }
         let id = uuid.v4();
         this.props.clickButton(this.state.value, id);
-        this.setState({value: ''})
+        this.setState({value: ''});
     }
 
     _onChangeHandler(e){
