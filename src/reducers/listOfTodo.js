@@ -22,6 +22,7 @@ export default function listOfTodo(state = ilo(), action) {
             //utilisation de la fonction filter qui retourne tous les elements  verifiant la condition
             //jai mis la negation pour retourner tout ce dont lidentifiant ne correspond pas
             let filteredArray = [...state].filter(item => !(item.id === action.payload));
+            localStorage.setItem("todos", JSON.stringify(filteredArray))
             return filteredArray;
         default:
             return state
