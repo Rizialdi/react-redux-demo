@@ -25,7 +25,7 @@ class Item extends Component {
                         onClick = {() => {
                             this.setState({done: !this.state.done});
                         }}
-                    >Done</Button>
+                    >{!this.state.done ? "DONE" : "UNDONE"}</Button>
                 </Col>
                 <Col xs={12} sm={2}>
                     <Button bsStyle = "danger" onClick = {() => this.props.clickTodo(this.props.id)}>Remove</Button>
