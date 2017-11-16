@@ -1,4 +1,4 @@
-This is a Project in which we gradually more from react components and their states to react and redux from global storage.
+This is a Project in which we gradually move from react components and their states to react and redux for global storage.
 
 git clone https://github.com/Rizialdi/react-redux-demo/
 
