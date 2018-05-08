@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {Button, FormControl, Col, Row} from 'react-bootstrap';
 import clickButton from '../actions/index'
 import uuid from 'uuid'
+import '../App.css'
 
 class TodoForm extends Component{
     constructor(){
@@ -17,24 +18,26 @@ class TodoForm extends Component{
     render(){
         return(
             <form action="#" method = "POST" >
-                <Row>
-                    <Col xs={1} ></Col>
-                    <Col xs={9} >
-                    <FormControl
-                        type="text"
-                        value = {this.state.value}
-                        placeholder="Add a todo"
-                        onChange={this._onChangeHandler}
-                    />
-                    </Col>
-                    <Col xs={2} >
-                    <Button
-                        bsStyle = "primary"
-                        type="submit"
-                        onClick={this._onClickHandler}
-                    >Add Item</Button>
-                    </Col>
-                </Row>
+                <div className="center-form">
+                    <Row >
+                        <Col xs={9} >
+                        <FormControl
+                            type="text"
+                            value = {this.state.value}
+                            placeholder="Add a todo"
+                            onChange={this._onChangeHandler}
+                        />
+                        </Col>
+                        <Col xs={3} >
+                        <Button
+                            bsStyle = "primary"
+                            type="submit"
+                            onClick={this._onClickHandler}
+                            className = "invi"
+                        >Add Item</Button>
+                        </Col>
+                    </Row>
+                </div>
             </form>
         )
     }
